@@ -10,14 +10,19 @@ const Search = (props) => {
           <Form onSubmit={props.handleSubmit}>
             <Row>
               <Col xs={9}>
-                <Form.Control 
-                    type="text"
-                    value={props.word}
-                    onChange={(e) => props.setWord(e.target.value)}
-                    placeholder='Search for new image...' />
+                <Form.Control
+                  type='text'
+                  value={props.word}
+                  onChange={(e) => props.setWord(e.target.value)}
+                  placeholder='Search for new image...'
+                />
               </Col>
               <Col>
-                <Button variant='primary' type='submit'>
+                <Button
+                  onClick={props.handleButtonClick}
+                  variant='primary'
+                  type='submit'
+                >
                   Search
                 </Button>
               </Col>
